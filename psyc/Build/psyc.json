@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "PSYC",
+"productVersion": "0.1",
+"dataUrl": "psyc.data.unityweb",
+"wasmCodeUrl": "psyc.wasm.code.unityweb",
+"wasmFrameworkUrl": "psyc.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#828080",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.17f1"
+}
