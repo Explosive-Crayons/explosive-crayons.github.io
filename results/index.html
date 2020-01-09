@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+				let qs = QueryString();
+        $('#failures').text(function(i, oldText) {
+          return oldText + qs.f;
+        });
+				$('#catches').text(function(i, oldText) {
+          return oldText + qs.c;
+        });
+      })
+
+      function QueryString()
+      {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+          }
+          return vars;
+      }
+    </script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div class="center">
+      <h2>Loss of Control Test Results</h2>
+      <p id="failures">Control Failures: </p>
+      <p id="catches">Times Caught: </p>
+    </div>
+  </body>
+</html>
